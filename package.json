@@ -1,6 +1,6 @@
 {
-  "name": "squishy",
-  "display_name": "Squishy",
+  "name": "lab-frontend",
+  "display_name": "Namics Lab - Frontend",
   "version": "1.0.0",
   "description": "",
   "main": "./index.js",
@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "anypixel": "^1.0.0",
+    "browserify": "^13.1.0",
     "browserify-shim": "^3.8.12",
     "liquidfun-emscripten": "^1.1.2",
     "lucy-b2": "^1.0.1",
