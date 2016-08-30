@@ -18,7 +18,6 @@ limitations under the License.
 "use strict";
 //---------------------------------------------------------------------------------
 const LeapMotion        = require('./motion/leap');
-const Swish             = require('./motion/swish');
 const scaleGraph        = require('./motion/scale-graph');
 const vec               = require('./motion/vec');
 //---------------------------------------------------------------------------------

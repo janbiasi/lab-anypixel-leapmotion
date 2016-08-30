@@ -17,8 +17,7 @@ limitations under the License.
 
 "use strict";
 //---------------------------------------------------------------------------------
-var SquishyLetters = function(b2,world) {
-
+var SquishyLetters = function(b2, world) {
     const CENTER_VEC2       = new b2.Vec2(7,2.2);
     const FLOOR_OFFSET_Y    = 2.1;
     const COLOR_BUFFER      = [ "#3761ff", "#e83a23", "#fdce00", "#3761ff", "#4dce22", "#e83a23" ];
@@ -104,7 +103,7 @@ var SquishyLetters = function(b2,world) {
 
     // O
     let _oOneShape = new b2.CircleShape();
-        _oOneShape.m_p.Set(3.6,1.9);
+        _oOneShape.m_p.Set(3.5, 1.9);
         _oOneShape.m_radius = LETTER_RADIUS;
     let _oOneParticleDef = new b2.ParticleGroupDef();
         _oOneParticleDef.flags = b2.ParticleFlag.elasticParticle;
