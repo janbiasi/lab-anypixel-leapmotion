@@ -20,6 +20,7 @@ limitations under the License.
 const LeapMotion        = require('./motion/leap');
 const scaleGraph        = require('./motion/scale-graph');
 const vec               = require('./motion/vec');
+const fps               = require('./motion/fps');
 //---------------------------------------------------------------------------------
 const Anypixel          = require('anypixel');
 const b2                = require ('lucy-b2');
@@ -58,6 +59,8 @@ var app = new (function(){
 
 	var modifier   = 1;
 	var world      = new b2.World ( GRAVITY );
+    var countFps   = fps(document.body);
+
     this.mouseVec  = undefined;
     this.seekHome  = true;
     this.buttonPresses = 0;
@@ -240,6 +243,10 @@ var app = new (function(){
             _self.resetLetters();
         },700);
     }
+
+    LeapMotion.on('frameloop', function(frame) {
+        countFps.innerHTML = parseInt(frame.currentFrameRate) + ' FPS';
+    });
 
     LeapMotion.on('noaction', function(frame) {
         window.upTimer = window.setTimeout(function() {
